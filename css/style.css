@@ -1,0 +1,115 @@
+:root {
+	--st0: #04061F;
+	--st2: #C22E90;
+	--st3: #6CD86E;
+	--st4: #C2616E;
+	--st5: #E8D453;
+	--st6: #6CC9EF;
+}
+html,
+body,
+.container,
+.skull {
+	height: 100%;
+}
+body {
+	margin: 0;
+	background-color: var(--st0);
+}
+
+.skull {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.skull svg {
+	display: block;
+	width: 50%;
+	max-height: 100vh;
+}
+.skull #BG {
+	display: none;
+}
+.skull #FLOWERS .st2,
+.skull #NOSE .st2 {
+	fill: var(--st2);
+	animation: color-st2 5s infinite linear;
+}
+.skull #PUPILLS{
+	animation: pupill-st2 10s infinite linear;
+}
+.skull #FLOWERS .st3{
+	fill: var(--st3);
+	animation: color-st3 5s infinite linear;
+}
+.skull #FLOWERS .st4{
+	fill: var(--st4);
+	animation: color-st4 5s infinite linear;
+}
+.skull #FLOWERS .st5{
+	fill: var(--st5);
+	animation: color-st5 5s infinite linear;
+}
+.skull #FLOWERS .st5.turn{
+	fill: var(--st5);
+	animation: color-st5 5s infinite linear, turn 40s infinite linear;
+	transform-box: fill-box;
+	transform-origin: 50% 50%;
+}
+.skull #FLOWERS .st6{
+	fill: var(--st6);
+	animation: color-st6 5s infinite linear;
+}
+.skull #FLOWERS .st7{
+	fill: var(--st7);
+	animation: color-st7 5s infinite linear;
+}
+
+
+[id$="-bottom"] {
+	animation: mouth 2s infinite alternate;
+}
+
+@keyframes mouth {
+  20% { transform: translate(0, 0px) }
+  50% { transform: translate(0, 50px) }
+  80% { transform: translate(0, 0px) }
+}
+
+@-webkit-keyframes color-st2 {
+    20% { fill: var(--st2); }
+  50% { fill:  var(--st0); }
+  80% { fill: var(--st2); }
+}
+@-webkit-keyframes pupill-st2 {
+    0% { opacity: 1 }
+  50% { opacity: 0}
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes color-st3 {
+    20% { fill: var(--st3); }
+  50% { fill:  var(--st0); }
+  80% { fill: var(--st3); }
+}
+@-webkit-keyframes color-st4 {
+    20% { fill: var(--st4); }
+  50% { fill:  var(--st0); }
+  80% { fill: var(--st4); }
+}
+@-webkit-keyframes color-st5 {
+    20% { fill: var(--st5); }
+  50% { fill:  var(--st0); }
+  80% { fill: var(--st5); }
+}
+@-webkit-keyframes color-st6 {
+    20% { fill: var(--st6); }
+  50% { fill:  var(--st0); }
+  80% { fill: var(--st6); }
+}
+@-webkit-keyframes color-st7 {
+    20% { fill: var(--st7); }
+  50% { fill:  var(--st0); }
+  80% { fill: var(--st7); }
+}
